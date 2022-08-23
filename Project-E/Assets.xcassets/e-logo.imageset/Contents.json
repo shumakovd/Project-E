@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "e-logo.pdf",
       "idiom" : "universal"
     }
   ],

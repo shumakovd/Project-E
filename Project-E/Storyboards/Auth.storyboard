@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="JIi-p4-wVr">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" modalPresentationStyle="fullScreen" id="0JR-be-m5r" customClass="LoginVC" customModule="Restaurant_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FO0-an-htT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHM-xc-4gs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Cf2-e0-LTx">
+                                <rect key="frame" x="25" y="383" width="364" height="140.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логін" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-rA-0N3">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
+                                        <color key="textColor" name="colorBM"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+38(ххх)-хх-хх-ххх" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1r-CB-hY9" customClass="NMTextField" customModule="Restaurant_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40.5" width="364" height="42"/>
+                                        <color key="tintColor" name="colorBM"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="hpt-7R-CvR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="tel"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ere-dj-6om" customClass="NMTextField" customModule="Restaurant_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98.5" width="364" height="42"/>
+                                        <color key="tintColor" name="colorBM"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="nEq-P1-WSr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iOq-3v-dKM">
+                                <rect key="frame" x="25" y="539.5" width="135" height="46.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не маєте акаунту?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRF-ZM-SPe">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                        <color key="textColor" name="colorBM"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n05-0A-6L0">
+                                        <rect key="frame" x="0.0" y="19.5" width="135" height="27"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                        <state key="normal" title="Реєстрація">
+                                            <color key="titleColor" name="colorBM"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="authAction:" destination="0JR-be-m5r" eventType="touchUpInside" id="0Xd-bQ-Vzd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-cE-D0d">
+                                <rect key="frame" x="277" y="539.5" width="112" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="3kZ-cd-Tdu"/>
+                                    <constraint firstAttribute="height" constant="36" id="9P6-x6-kQ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <state key="normal" title="Увійти">
+                                    <color key="titleColor" name="colorBM"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="0JR-be-m5r" eventType="touchUpInside" id="xpr-pn-j4h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5S-yx-Df1">
+                                <rect key="frame" x="126" y="283" width="162" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ngs-ru-eyS"/>
+                                    <constraint firstAttribute="width" constant="162" id="qrb-74-524"/>
+                                </constraints>
+                                <state key="normal" image="restaurant_banner"/>
+                                <connections>
+                                    <action selector="restaurantBannerAction:" destination="0JR-be-m5r" eventType="touchUpInside" id="c4i-XY-l6A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Xf-3W-MVo"/>
+                        <color key="backgroundColor" name="colorWB"/>
+                        <constraints>
+                            <constraint firstItem="Cf2-e0-LTx" firstAttribute="centerY" secondItem="1Xf-3W-MVo" secondAttribute="centerY" id="0yW-UH-a0V"/>
+                            <constraint firstItem="bHM-xc-4gs" firstAttribute="trailing" secondItem="1Xf-3W-MVo" secondAttribute="trailing" id="Eaa-RP-ZYC"/>
+                            <constraint firstItem="nhP-cE-D0d" firstAttribute="top" secondItem="iOq-3v-dKM" secondAttribute="top" id="GPP-Gi-kWf"/>
+                            <constraint firstItem="Cf2-e0-LTx" firstAttribute="top" secondItem="A5S-yx-Df1" secondAttribute="bottom" constant="50" id="JnF-YD-9qc"/>
+                            <constraint firstItem="iOq-3v-dKM" firstAttribute="top" secondItem="Cf2-e0-LTx" secondAttribute="bottom" constant="16" id="P5h-AL-fGq"/>
+                            <constraint firstAttribute="bottom" secondItem="bHM-xc-4gs" secondAttribute="bottom" id="TED-WZ-EwA"/>
+                            <constraint firstItem="bHM-xc-4gs" firstAttribute="top" secondItem="FO0-an-htT" secondAttribute="top" id="VJ9-h1-m31"/>
+                            <constraint firstItem="bHM-xc-4gs" firstAttribute="leading" secondItem="1Xf-3W-MVo" secondAttribute="leading" id="XUm-hL-VrI"/>
+                            <constraint firstItem="iOq-3v-dKM" firstAttribute="leading" secondItem="1Xf-3W-MVo" secondAttribute="leading" constant="25" id="hqB-VL-KRt"/>
+                            <constraint firstItem="A5S-yx-Df1" firstAttribute="centerX" secondItem="1Xf-3W-MVo" secondAttribute="centerX" id="mLU-Ep-I2k"/>
+                            <constraint firstItem="Cf2-e0-LTx" firstAttribute="leading" secondItem="1Xf-3W-MVo" secondAttribute="leading" constant="25" id="rQ2-V4-Ogu"/>
+                            <constraint firstItem="1Xf-3W-MVo" firstAttribute="trailing" secondItem="nhP-cE-D0d" secondAttribute="trailing" constant="25" id="txH-qt-bj5"/>
+                            <constraint firstItem="1Xf-3W-MVo" firstAttribute="trailing" secondItem="Cf2-e0-LTx" secondAttribute="trailing" constant="25" id="zWo-k3-Ric"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hiddenAnimationView" destination="bHM-xc-4gs" id="NEt-7H-M7l"/>
+                        <outlet property="loginButton" destination="nhP-cE-D0d" id="Mk3-KQ-ogG"/>
+                        <outlet property="numberTextField" destination="c1r-CB-hY9" id="Rnc-VZ-afq"/>
+                        <outlet property="passwordTextField" destination="ere-dj-6om" id="Q6l-cW-jfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6RP-QP-CTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="2.6785714285714284"/>
+        </scene>
+        <!--AuthenticationVC-->
+        <scene sceneID="v7l-he-DbI">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationVC" modalPresentationStyle="fullScreen" id="XkQ-zM-jDD" customClass="AuthenticationVC" customModule="Restaurant_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gsw-3M-4Lw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="60o-hF-0Sa">
+                                <rect key="frame" x="25" y="568.5" width="105" height="46.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Маєте акаунт?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vja-LK-ACA">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                        <color key="textColor" name="colorBM"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-rd-cwA">
+                                        <rect key="frame" x="0.0" y="19.5" width="105" height="27"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                        <state key="normal" title="Логін">
+                                            <color key="titleColor" name="colorBM"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToLoginAction:" destination="XkQ-zM-jDD" eventType="touchUpInside" id="KvT-6x-ACA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-nH-HfD">
+                                <rect key="frame" x="277" y="568.5" width="112" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="5OD-Zd-h9M"/>
+                                    <constraint firstAttribute="height" constant="36" id="smJ-s5-sTy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                                <state key="normal" title="Реєстрація">
+                                    <color key="titleColor" name="colorBM"/>
+                                </state>
+                                <connections>
+                                    <action selector="authAction:" destination="XkQ-zM-jDD" eventType="touchUpInside" id="jdB-EA-YYg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Zm1-3G-0MT">
+                                <rect key="frame" x="25" y="354" width="364" height="198.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Реєстрація" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-yI-Nai">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
+                                        <color key="textColor" name="colorBM"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ім'я" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIY-O9-Sef" customClass="NMTextField" customModule="Restaurant_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40.5" width="364" height="42"/>
+                                        <color key="tintColor" name="colorBM"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="YYi-oP-3IK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+38(ххх)-хх-хх-ххх" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-3E-Zjh" customClass="NMTextField" customModule="Restaurant_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98.5" width="364" height="42"/>
+                                        <color key="tintColor" name="colorBM"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="LAz-Qp-SPP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1d-nv-wQ7" customClass="NMTextField" customModule="Restaurant_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="156.5" width="364" height="42"/>
+                                        <color key="tintColor" name="colorBM"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="rAG-Ya-N61"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Реєструючись, Ви погоджуєтесь з" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oT-lz-ti8">
+                                <rect key="frame" x="119.5" y="804.5" width="175.5" height="12.5"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
+                                <color key="textColor" name="colorBM"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-C6-QpS">
+                                <rect key="frame" x="123.5" y="835" width="167" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="MGK-sa-igA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="10"/>
+                                <state key="normal" title="договором публічної оферти">
+                                    <color key="titleColor" name="colorBM"/>
+                                </state>
+                                <connections>
+                                    <action selector="ofertaAction:" destination="XkQ-zM-jDD" eventType="touchUpInside" id="0i3-lT-ozE"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uky-X6-gO0">
+                                <rect key="frame" x="116.5" y="819" width="181" height="16"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWG-9j-XO0">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="GfP-W9-enc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="10"/>
+                                        <state key="normal" title="політикою конфіденційності">
+                                            <color key="titleColor" name="colorBM"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="privacyAction:" destination="XkQ-zM-jDD" eventType="touchUpInside" id="hDE-fV-BRH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="та" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-sh-LhU">
+                                        <rect key="frame" x="170" y="0.0" width="11" height="16"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
+                                        <color key="textColor" name="colorBM"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rda-sh-IUZ">
+                                <rect key="frame" x="126" y="254" width="162" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="M81-LM-uFC"/>
+                                    <constraint firstAttribute="height" constant="50" id="TRb-q5-gX0"/>
+                                </constraints>
+                                <state key="normal" image="restaurant_banner"/>
+                                <connections>
+                                    <action selector="restaurantBannerAction:" destination="XkQ-zM-jDD" eventType="touchUpInside" id="v9D-dk-Vo8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NHi-8B-mP0"/>
+                        <color key="backgroundColor" name="colorWB"/>
+                        <constraints>
+                            <constraint firstItem="4oT-lz-ti8" firstAttribute="centerX" secondItem="NHi-8B-mP0" secondAttribute="centerX" id="A2T-On-21b"/>
+                            <constraint firstItem="Zm1-3G-0MT" firstAttribute="centerY" secondItem="NHi-8B-mP0" secondAttribute="centerY" id="OJs-XL-l51"/>
+                            <constraint firstItem="NHi-8B-mP0" firstAttribute="trailing" secondItem="i4F-nH-HfD" secondAttribute="trailing" constant="25" id="QC6-3n-jos"/>
+                            <constraint firstItem="uky-X6-gO0" firstAttribute="centerX" secondItem="NHi-8B-mP0" secondAttribute="centerX" id="TjW-qg-Vt1"/>
+                            <constraint firstItem="SXX-C6-QpS" firstAttribute="top" secondItem="uky-X6-gO0" secondAttribute="bottom" id="W0w-ie-GDY"/>
+                            <constraint firstItem="Zm1-3G-0MT" firstAttribute="top" secondItem="rda-sh-IUZ" secondAttribute="bottom" constant="50" id="ba9-vM-2gG"/>
+                            <constraint firstAttribute="bottom" secondItem="SXX-C6-QpS" secondAttribute="bottom" constant="45" id="eSX-hh-7Ta"/>
+                            <constraint firstItem="SXX-C6-QpS" firstAttribute="centerX" secondItem="NHi-8B-mP0" secondAttribute="centerX" id="gN7-Iu-71y"/>
+                            <constraint firstItem="uky-X6-gO0" firstAttribute="top" secondItem="4oT-lz-ti8" secondAttribute="bottom" constant="2" id="hW1-Ti-jSe"/>
+                            <constraint firstItem="i4F-nH-HfD" firstAttribute="top" secondItem="60o-hF-0Sa" secondAttribute="top" id="igl-BP-N9H"/>
+                            <constraint firstItem="rda-sh-IUZ" firstAttribute="centerX" secondItem="NHi-8B-mP0" secondAttribute="centerX" id="jId-Y8-uMc"/>
+                            <constraint firstItem="60o-hF-0Sa" firstAttribute="top" secondItem="Zm1-3G-0MT" secondAttribute="bottom" constant="16" id="jeJ-ar-mam"/>
+                            <constraint firstItem="Zm1-3G-0MT" firstAttribute="leading" secondItem="NHi-8B-mP0" secondAttribute="leading" constant="25" id="lKN-G5-xIy"/>
+                            <constraint firstItem="60o-hF-0Sa" firstAttribute="leading" secondItem="NHi-8B-mP0" secondAttribute="leading" constant="25" id="qKV-xK-Dqb"/>
+                            <constraint firstItem="NHi-8B-mP0" firstAttribute="trailing" secondItem="Zm1-3G-0MT" secondAttribute="trailing" constant="25" id="tWN-EI-2ye"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authButton" destination="i4F-nH-HfD" id="oEX-5j-1Jx"/>
+                        <outlet property="nameTextField" destination="SIY-O9-Sef" id="pfi-in-tS2"/>
+                        <outlet property="numberTextField" destination="fzw-3E-Zjh" id="w0A-be-I9m"/>
+                        <outlet property="passwordTextField" destination="z1d-nv-wQ7" id="u2c-Cz-HJy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJS-ei-jMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1058" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restaurant_banner" width="163" height="51"/>
+        <namedColor name="colorBM">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorWB">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
